@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelix</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="st">
+      <div class="row1">
+        <div class="row-left">
+          <a href="#" class="num">+45 345 3324 56789</a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="#"><i class="fa-brands fa-behance"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        </div>
+        <div class="row-right">
+          <a href="#" class="log">LOGIN</a>
+          <span class="inrow1">|</span>
+          <a href="#" class="log">REGISTER</a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top navjs">
+        <div class="for_nav">
+            <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt="">
+            <h2 class="t1">TRAVELiX</h2>      
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Contact</a>
+            </li>
+          </ul>
+          <i class="fa-solid fa-magnifying-glass nav-search"></i>
+             
+        </div>
+        
+      </nav>
+
+      <div id="carouselExampleControls" class="carousel slide carousel_top" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active caroo">
+            <div class="x">
+              <div data-aos="flip-down" class="flipper">
+                <h1 class="xx">DISCOVER</h1>
+                <h2 class="xx fontx">the world</h2>
+                <button class="but1">EXPLORE NOW</button>
+              </div>
+                
+            </div>
+          </div>
+          <div class="carousel-item caroo">
+            <div data-aos="flip-up" class="x">
+              <div data-aos="flip-down" class="flipper">
+                <h1 class="xx">DISCOVER</h1>
+                <h2 class="xx fontx">the world</h2>
+                <button class="but1">EXPLORE NOW</button>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item caroo">
+            <div data-aos="flip-up" class="x">
+              <div data-aos="flip-down" class="flipper">
+                <h1 class="xx">DISCOVER</h1>
+                <h2 class="xx fontx">the world</h2>
+                <button class="but1">EXPLORE NOW</button>
+              </div>
+          </div>
+          </div>
+          
+        </div>
+       <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+        
+      </div>
+      <div class="outsearch">
+        <div class="search">
+          <div class="search-item st1">
+            <i class="fa-solid fa-hotel"></i>
+            <p>HOTELS</p>
+          </div>
+          <div class="search-item">
+            <img class="car" src="data:image/webp;base64,UklGRsIBAABXRUJQVlA4TLUBAAAvIoAEECeEoG3bmD+Icf2ycxj94UCYtm1zs91uE5AkB8Ju4MwAAAAGwEoQIAgQwh4DBiKExQAAsQAgABBcQLwIGICFCEIEECZ2jCdKBWE0CJdxtCAEwiKQCPOL8ON0eLEAEmzbNu1oxfZ9sY3v+2OVbbti207ey+75dw8i+j8BwNCnH+/+zs3Nvf8wNzf3++3Pubm5T+/m5v+98VUQt/pImfxaAORcqo+oyoDTdaBFPcB/Fyi93dddPbxUHYypMmYDaFU/MB+Tq3Cxp3K0AoyrBjjbBDo0CCzElOoJFdpGD4Co8oGTNaBRncCfGDQFHeq9/2Ic81htxjEXu8YxAY0axyy7juM065VxKtzVS2X+wF2KWBv0Ray1Pr+1NuwLWRvZ8ay11he0kfAfV49I6687EoekV+lZcBP4F4+u42UXpyW/ECZd7yrOQ2m9NoV7+Cz9LoBp6QE817cncrOS+nnOnF480xaMStvTs3oOVVqaSXL6+OapAtCtd9OrOpOkduBQyXtSHiBJZ8WlxeXay2ZEw0UlyRY16Du8VktRaTFAl3SjP6Q6IXl6QuKmj3NRUu/6+WeAWAA=" alt="">
+            <p>CAR RENTALS</p>
+          </div>
+          <div class="search-item">
+            <img class="plane" src="data:image/webp;base64,UklGRqgBAABXRUJQVlA4TJsBAAAvJsAEEHdkkG2k+kO8693/O4z+cChs27ZNRVI6FLlt2yC3TuobmBkAEIAQQABgBH3pzGIK2Q++Ax8ghAVYuB50kIcDAQ6M4+KxWISwNZxzJyHOLYLbtdKXuJ6uH10SHgUiACEkSJJt2lY/27Zt27Ztm5/P9ns16Xtw7wwi+j8BMgxaP9y7gq1cubodXrbOYCfTTmzz1OJwvgUV8U9KmIPNHCvl5xiexpipmNdAKX4RNjIN3BueYb4o2De5m0cLKuY5VFLSLKznyrv7h69efxleYkUlPAdKUsoC7MNDm4yrn+ixpAruA+SYusxtjQzdWx6gWTbLuPFzkKJk6Nv3w0+nj2xncxFpYBg+Ao/NHjKOT7CQ/skvL5PEOfhfKtO0GTiq8HaoueZjKMfDIG8TDgpkPg0z88B4Vu0bDPrJsPAE1jJktYoLKaDtN/DR6S3D6guYjJPNelYlKX28S4aerS8wHCL7Y/TLYsAAfHb4yqkrNJlEjMJdo5y9TalDdN06/K2U093eOT44uQHYzZcr45a+4ePPREWYXO4hlwMA" alt="">
+            <p>FLIGHTS</p>
+          </div>
+          <div class="search-item">
+            <img class="trip" src="data:image/webp;base64,UklGRgwCAABXRUJQVlA4TP8BAAAvIIAHEB+FoG3bmD+Ic93aHcPoD4fCtm3bUGh3qm3bhkGmHt6BeQMEAAAFwAIEsAbxDwQBbBQAAbT2hng0qaMRdLaS0FcQWRGKtoi2oIBVqDDwR1hkNJxECxE0PgQrhDVGeVQACJIkm7b6vW/btm3btm3btm0+9FIvlxDR/wmA2iE7fOyEqm7JTYPFLsjj9xQ31IkljeQFJwHdojr4uoRjHZ8AcF6lcMYD1k6ARk/O26uBPbpAqInIXyTDVCjglb+I6BKdFBVyBjLNA3t5pcSdDQCsxMaf+T9ZICgdqJAYZePc+rEn4ARggnEQN5Bvnu71rdnObT+GNxKoNT5Vw5QZEs+zti8UppnYA6uvyCNfuI27fRGfEW4j8LYcR69aAJh+qWHL8Zw/fx7WBSXkZhEA5DIawiiyH92ExSmHAaRxCuKtv+euAtPzKiCdgUBfBoBdPo9VCMyAqxcLSHoxB+L20cM8gUMwYtaHz5ksZckWCcBG51FFpoC8mvOTAgdkVP4ecIvs0mVCNodkpJG+0J2R3rLM2SEjcNoOYFPuOWS7sFCG6OE3FCYyQEkigxTMEIq/7xVwRVkEOwCE9u9dny9kIYGBytDMnsgb8mbvTMdf3STUTCVfckwBIGSNC6qEcALSSVxWwZXtkOvOJmXnLKuskZn5TgclTr+flP/xVyEGAA==" alt="">
+            <p>TRIPS</p>
+          </div>
+          <div class="search-item">
+            <img class="ship" src="data:image/webp;base64,UklGRpoBAABXRUJQVlA4TI4BAAAvI8AEEMdjkG2k+kO862cHMfrDobBt2zZXyRltzaZtQ9ak1R04NygICgTzAA8gAK8egJjhIPhoACGCxEKjHtgDBNYDWAQC3ADoMT9m9AEgHB4CxokdFfpdMVBwkIgBgiTJpq15tt/7tm3btm3bv/d/vYM+Ef1n4LaRonoZDr4hBu7RhR21NpURRwLgryKLncWNYWERCp2FGBDmIetoNPYIPivy5/nljeT7lZ0fCeJvYnJ55WBydnn1VINrG6lGoGiDs1KxwQnDhxRYZ/2TZRuck3JjeHNrNfLNgEfb81w83prn0jFJ7v3gYrPKNA04Wbw8v3s6059TDy9Kne0/gaa5/xZfUAkDJudIkkS3SfWjXUA2C8hGAdkrZLS1s+kf3aqtpaNRN/dKSVl5WDsXktKy8oTQ+wHyjzr1qXDo9s0TFpJhIV1hIRlKPiI/logz4tpFpcz+fsGenOiMoFaYxnddx+CAFfbn6esQOoVkH7xiXxeGROfn1X6twbToFeP/5dWeNyyKUc/e0aEtVOOiQw==" alt="">
+            <p>CRUISES</p>
+          </div>
+          <div class="search-item search-last">
+            <img class="act" src="data:image/webp;base64,UklGRr4BAABXRUJQVlA4TLEBAAAvHsAHEC+koG0bxvxBjGv3MIz+cChs27bNVXKSLkVu2zbIabbMN7BqAAAQAgABCsAARoECbyBoNBwJBowJPXMoCPEhHkAAiGXZMMh6CUHmgk0A2AADEcwQ+qjJMABABC5Gg+/eQgFIkCTbtK1+tm3btm3b33y2VSM/2PvOIKL/EyD7eSf8SpD9yOerbk6j7Q0QqjRG7H15lMQ3e4s41uxlsJR1QI49tQPVCmQjxQpoKSmBqaLALaqivq7Ws74m3yR4DtPTSl8p93QnZWXneGbnNv6l10f422OM4mTYT5fXPuE6/gwx0BjpHjRrk8ogE50eSrmESaiSNhlX/GFyfJu1iSLU913mww+4NxAkq+NIFeRJ5PooT/bx+0wqI1VixQezXqH0SJ1ESxOkevTyEeSxS5j040mS/lHh0s/Q+XWBI3KNRimYQUfEVy425/ZgUPE3/F+eP4JWSTNEOqSmgxcuVwslqePnOycTiZISmJZpY4P83t7JMPsebtI84o9JNQi+vcnMebpwyRjlI0+GJeRK2Xy+vr0ByxEyzaVJamFjdX11qjVWFnfo6WdLAVyBBZkDAA==" alt="">
+            <p class="act2">ACTIVITIES</p>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+
+      <div class="search2">
+        <div class="respsearch">
+          <div class="respsearch-item res1">
+            <i class="fa-solid fa-hotel fa-2x"></i>
+            <h6>HOTELS</h6>
+          </div>
+          <div class="respsearch-item">
+            <img class="car" src="data:image/webp;base64,UklGRsIBAABXRUJQVlA4TLUBAAAvIoAEECeEoG3bmD+Icf2ycxj94UCYtm1zs91uE5AkB8Ju4MwAAAAGwEoQIAgQwh4DBiKExQAAsQAgABBcQLwIGICFCEIEECZ2jCdKBWE0CJdxtCAEwiKQCPOL8ON0eLEAEmzbNu1oxfZ9sY3v+2OVbbti207ey+75dw8i+j8BwNCnH+/+zs3Nvf8wNzf3++3Pubm5T+/m5v+98VUQt/pImfxaAORcqo+oyoDTdaBFPcB/Fyi93dddPbxUHYypMmYDaFU/MB+Tq3Cxp3K0AoyrBjjbBDo0CCzElOoJFdpGD4Co8oGTNaBRncCfGDQFHeq9/2Ic81htxjEXu8YxAY0axyy7juM065VxKtzVS2X+wF2KWBv0Ray1Pr+1NuwLWRvZ8ay11he0kfAfV49I6687EoekV+lZcBP4F4+u42UXpyW/ECZd7yrOQ2m9NoV7+Cz9LoBp6QE817cncrOS+nnOnF480xaMStvTs3oOVVqaSXL6+OapAtCtd9OrOpOkduBQyXtSHiBJZ8WlxeXay2ZEw0UlyRY16Du8VktRaTFAl3SjP6Q6IXl6QuKmj3NRUu/6+WeAWAA=" alt="">
+            <h6>CAR RENTALS</h6>
+          </div>
+          <div class="respsearch-item">
+            <img class="plane" src="data:image/webp;base64,UklGRqgBAABXRUJQVlA4TJsBAAAvJsAEEHdkkG2k+kO8693/O4z+cChs27ZNRVI6FLlt2yC3TuobmBkAEIAQQABgBH3pzGIK2Q++Ax8ghAVYuB50kIcDAQ6M4+KxWISwNZxzJyHOLYLbtdKXuJ6uH10SHgUiACEkSJJt2lY/27Zt27Ztm5/P9ns16Xtw7wwi+j8BMgxaP9y7gq1cubodXrbOYCfTTmzz1OJwvgUV8U9KmIPNHCvl5xiexpipmNdAKX4RNjIN3BueYb4o2De5m0cLKuY5VFLSLKznyrv7h69efxleYkUlPAdKUsoC7MNDm4yrn+ixpAruA+SYusxtjQzdWx6gWTbLuPFzkKJk6Nv3w0+nj2xncxFpYBg+Ao/NHjKOT7CQ/skvL5PEOfhfKtO0GTiq8HaoueZjKMfDIG8TDgpkPg0z88B4Vu0bDPrJsPAE1jJktYoLKaDtN/DR6S3D6guYjJPNelYlKX28S4aerS8wHCL7Y/TLYsAAfHb4yqkrNJlEjMJdo5y9TalDdN06/K2U093eOT44uQHYzZcr45a+4ePPREWYXO4hlwMA" alt="">
+            <h6>FLIGHTS</h6>
+          </div>
+          <div class="respsearch-item">
+            <img class="trip" src="data:image/webp;base64,UklGRgwCAABXRUJQVlA4TP8BAAAvIIAHEB+FoG3bmD+Ic93aHcPoD4fCtm3bUGh3qm3bhkGmHt6BeQMEAAAFwAIEsAbxDwQBbBQAAbT2hng0qaMRdLaS0FcQWRGKtoi2oIBVqDDwR1hkNJxECxE0PgQrhDVGeVQACJIkm7b6vW/btm3btm3btm0+9FIvlxDR/wmA2iE7fOyEqm7JTYPFLsjj9xQ31IkljeQFJwHdojr4uoRjHZ8AcF6lcMYD1k6ARk/O26uBPbpAqInIXyTDVCjglb+I6BKdFBVyBjLNA3t5pcSdDQCsxMaf+T9ZICgdqJAYZePc+rEn4ARggnEQN5Bvnu71rdnObT+GNxKoNT5Vw5QZEs+zti8UppnYA6uvyCNfuI27fRGfEW4j8LYcR69aAJh+qWHL8Zw/fx7WBSXkZhEA5DIawiiyH92ExSmHAaRxCuKtv+euAtPzKiCdgUBfBoBdPo9VCMyAqxcLSHoxB+L20cM8gUMwYtaHz5ksZckWCcBG51FFpoC8mvOTAgdkVP4ecIvs0mVCNodkpJG+0J2R3rLM2SEjcNoOYFPuOWS7sFCG6OE3FCYyQEkigxTMEIq/7xVwRVkEOwCE9u9dny9kIYGBytDMnsgb8mbvTMdf3STUTCVfckwBIGSNC6qEcALSSVxWwZXtkOvOJmXnLKuskZn5TgclTr+flP/xVyEGAA==" alt="">
+            <h6>TRIPS</h6>
+          </div>
+          
+          <div class="respsearch-item">
+            <img class="ship" src="data:image/webp;base64,UklGRpoBAABXRUJQVlA4TI4BAAAvI8AEEMdjkG2k+kO862cHMfrDobBt2zZXyRltzaZtQ9ak1R04NygICgTzAA8gAK8egJjhIPhoACGCxEKjHtgDBNYDWAQC3ADoMT9m9AEgHB4CxokdFfpdMVBwkIgBgiTJpq15tt/7tm3btm3bv/d/vYM+Ef1n4LaRonoZDr4hBu7RhR21NpURRwLgryKLncWNYWERCp2FGBDmIetoNPYIPivy5/nljeT7lZ0fCeJvYnJ55WBydnn1VINrG6lGoGiDs1KxwQnDhxRYZ/2TZRuck3JjeHNrNfLNgEfb81w83prn0jFJ7v3gYrPKNA04Wbw8v3s6059TDy9Kne0/gaa5/xZfUAkDJudIkkS3SfWjXUA2C8hGAdkrZLS1s+kf3aqtpaNRN/dKSVl5WDsXktKy8oTQ+wHyjzr1qXDo9s0TFpJhIV1hIRlKPiI/logz4tpFpcz+fsGenOiMoFaYxnddx+CAFfbn6esQOoVkH7xiXxeGROfn1X6twbToFeP/5dWeNyyKUc/e0aEtVOOiQw==" alt="">
+            <h6>CRUISES</h6>
+          </div>
+          <div class="respsearch-item">
+            <img class="act" src="data:image/webp;base64,UklGRr4BAABXRUJQVlA4TLEBAAAvHsAHEC+koG0bxvxBjGv3MIz+cChs27bNVXKSLkVu2zbIabbMN7BqAAAQAgABCsAARoECbyBoNBwJBowJPXMoCPEhHkAAiGXZMMh6CUHmgk0A2AADEcwQ+qjJMABABC5Gg+/eQgFIkCTbtK1+tm3btm3b33y2VSM/2PvOIKL/EyD7eSf8SpD9yOerbk6j7Q0QqjRG7H15lMQ3e4s41uxlsJR1QI49tQPVCmQjxQpoKSmBqaLALaqivq7Ws74m3yR4DtPTSl8p93QnZWXneGbnNv6l10f422OM4mTYT5fXPuE6/gwx0BjpHjRrk8ogE50eSrmESaiSNhlX/GFyfJu1iSLU913mww+4NxAkq+NIFeRJ5PooT/bx+0wqI1VixQezXqH0SJ1ESxOkevTyEeSxS5j040mS/lHh0s/Q+XWBI3KNRimYQUfEVy425/ZgUPE3/F+eP4JWSTNEOqSmgxcuVwslqePnOycTiZISmJZpY4P83t7JMPsebtI84o9JNQi+vcnMebpwyRjlI0+GJeRK2Xy+vr0ByxEyzaVJamFjdX11qjVWFnfo6WdLAVyBBZkDAA==" alt="">
+            <h6>ACTIVITIES</h6>
+          </div>
+        </div>
+
+
+        <div class="for-search2">
+        <div class="in_search2">
+          <p>DESTINATION</p>
+          <input type="text" class="destination">
+        </div>
+        <div class="in_search2">
+          <p>CHECK IN</p>
+          <input type="date" class="date1">
+        </div>
+        <div class="in_search2">
+          <p>CHECK OUT</p>
+          <input type="date" class="date1">
+        </div>
+        <div class="in_search2">
+          <p>ADULTS</p>
+          <select name="#" id="">
+            <option value="#" selected>1</option>
+            <option value="#">2</option>
+            <option value="#">3</option>
+          </select>
+        </div>
+        <div class="in_search2">
+          <p>CHILDREN</p>
+          <select name="" id="">
+            <option value="#" selected>0</option>
+            <option value="#">02</option>
+            <option value="#">03</option>
+          </select>
+        </div>
+        <button class="search2-but">search</button>
+      </div>
+    </div>
+      
+      <div class="best-tours">
+        <h2>We have the best tours</h2>
+      </div>
+      <div class="best-tours2">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. <br> 
+          Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</h3>
+      </div>
+      <div class="intro">
+        <div class="intro-col1">
+          <div class="intro-date"> 
+            <p>May 25th - June 01st</p>
+          </div>
+          <H2 class="introh2">MAURITIUS</H2>
+          <p class="introprice">From $1450</p>
+          <div>
+            <i class="fas fa-star star1"></i>
+            <i class="fas fa-star star2"></i>
+            <i class="fas fa-star star3"></i>
+            <i class="fas fa-star star4"></i>
+            <i class="fas fa-star star5"></i>
+          </div>
+          <button class="introbut">SEE MORE</button>
+        </div>
+        <div class="intro-col2">
+          <div class="intro-date"> 
+            <p>May 25th - June 01st</p>
+          </div>
+          <H2 class="introh2">GREECE</H2>
+          <p class="introprice">From $1450</p>
+          <div>
+            <i class="fas fa-star star1"></i>
+            <i class="fas fa-star star2"></i>
+            <i class="fas fa-star star3"></i>
+            <i class="fas fa-star star4"></i>
+            <i class="fas fa-star star5"></i>
+          </div>
+          <button class="introbut">SEE MORE</button>
+
+        </div>
+        <div class="intro-col3">
+          <div class="intro-date"> 
+            <p>May 25th - June 01st</p>
+          </div>
+          <H2 class="introh2">SCOTLAND</H2>
+          <p class="introprice">From $1450</p>
+          <div>
+            <i class="fas fa-star star1"></i>
+            <i class="fas fa-star star2"></i>
+            <i class="fas fa-star star3"></i>
+            <i class="fas fa-star star4"></i>
+            <i class="fas fa-star star5"></i>
+          </div>
+          <button class="introbut">SEE MORE</button>
+
+        </div>
+
+      </div>
+
+      <div class="cta-background">
+        <div id="carouselExampleCaptions" class="carousel slide slide1" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active carousel1">         
+              <div class="carousel-caption d-none d-md-block ">
+                  <h1>MALDIVES DELUXE PACKAGE</h1>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam eu convallis tortor. Suspendise potenti. In 
+                      faucibus massa arcu, vatae cursus mi hendireris nec proin
+                      bibendum, augue foucibus tincidunt ultrices, tortor augue 
+                  gravida lectus, et efficitur enim justo ver lihua.</p>
+                  <button class="slider2but">BOOK NOW</button>
+              </div>
+            </div>
+            <div class="carousel-item carousel1">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>MALDIVES DELUXE PACKAGE</h1>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam eu convallis tortor. Suspendise potenti. In 
+                      faucibus massa arcu, vatae cursus mi hendireris nec proin
+                      bibendum, augue foucibus tincidunt ultrices, tortor augue 
+                  gravida lectus, et efficitur enim justo ver lihua.               </p>
+                  <button class="slider2but">BOOK NOW</button>
+              </div>
+            </div>
+            <div class="carousel-item carousel1">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>MALDIVES DELUXE PACKAGE</h1>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <i class="fa-solid fa-star slider2star"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nullam eu convallis tortor. Suspendise potenti. In 
+                      faucibus massa arcu, vatae cursus mi hendireris nec proin
+                      bibendum, augue foucibus tincidunt ultrices, tortor augue 
+                  gravida lectus, et efficitur enim justo ver lihua.               </p>
+                  <button class="slider2but">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="title3">
+          <h2>THE BEST OFFERS WITH ROOMS</h2>
+      </div>
+
+      <div class="for-offers">
+        <div class="offers">
+          <div class="offer1">
+
+          </div>
+          <div class="offer-info">
+            <div class="offerprice">
+              <i class="fa-solid fa-dollar-sign fa-3x">70</i>
+              <p>per night</p>
+              <p></p>
+            </div>
+            <div class="offerstars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+            <p>
+              Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit. Nullam eu convallis tortor.
+            </p>
+            <div class="offerlogos">
+              <img class="l" src="images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+              <img class="ofimg" src="images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+              <img class="ofimg" src="images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+              <img class="ofimg" src="images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+            </div>
+            <a href="#">READ MORE</a>
+
+          </div>
+        </div>
+        <div class="offers">
+          <div class="offer2">
+
+          </div>
+          <div class="offer-info">
+            <div class="offerprice">
+              <i class="fa-solid fa-dollar-sign fa-3x">70</i>
+              <p>per night</p>
+            </div>
+            <div class="offerstars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+            <p>
+              Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit. Nullam eu convallis tortor.
+            </p>
+            <div class="offerlogos">
+              <img class="l" src="images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+              <img class="ofimg" src="images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+              <img class="ofimg" src="images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+              <img class="ofimg" src="images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+            </div>
+            <a href="#">READ MORE</a>
+
+          </div>
+        </div>
+        <div class="offers">
+          <div class="offer3">
+
+          </div>
+          <div class="offer-info">
+            <div class="offerprice">
+              <i class="fa-solid fa-dollar-sign fa-3x">70</i>
+              <p>per night</p>
+            </div>
+            <div class="offerstars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+            <p>
+              Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit. Nullam eu convallis tortor.
+            </p>
+            <div class="offerlogos">
+              <img class="l" src="images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+              <img class="ofimg" src="images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+              <img class="ofimg" src="images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+              <img class="ofimg" src="images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+            </div>
+            <a href="#">READ MORE</a>
+
+          </div>
+        </div>
+        <div class="offers">
+          <div class="offer4">
+
+          </div>
+          <div class="offer-info">
+            <div class="offerprice">
+              <i class="fa-solid fa-dollar-sign fa-3x">70</i>
+              <p>per night</p>
+            </div>
+            <div class="offerstars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+            <p>
+              Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit. Nullam eu convallis tortor.
+            </p>
+            <div class="offerlogos">
+              <img class="l" src="images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+              <img class="ofimg" src="images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+              <img class="ofimg" src="images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+              <img class="ofimg" src="images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+            </div>
+            <a href="#">READ MORE</a>
+            
+
+          </div>
+          
+        </div>
+
+      </div>
+      <div class="title4">
+        <h2>WHAT OUR CLIENTS SAY ABOUT US</h2>
+      </div>
+      <div class="forowl">
+        <div class="owl-carousel owl-theme">
+            <div class="item itc">
+                <div class="c1">
+                  <div class="clogo"><img src="https://preview.colorlib.com/theme/travelix/images/xkayak.png.pagespeed.ic.ago24-WwTs.webp" alt=""></div>
+                  <div class="test_content">
+                    <div class="in-mid">
+                      <a>CARLA SMITH</a>
+                      <a class="in-mid-p">May 24, 2017</a>
+                    </div>
+                    <h5>"BEST HOLIDAY EVER"</h5>
+                    <P>Nullam eu convallis tortor. Suspendisse potenti. 
+                      In faucibus messa arcu, vitae cursus mi hendrerit nec.</P>
+                  </div>
+                </div>
+            </div>
+            <div class="item itc">
+                <div class="c2">
+                  <div class="clogo">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xisland_t.png.pagespeed.ic.VzskOYDdnJ.webp" alt="">
+                  </div>
+                  <div class="test_content">
+                    <div class="in-mid">
+                      <a>CARLA SMITH</a>
+                      <a class="in-mid-p">May 24, 2017</a>
+                    </div>
+                    <h5>"BEST HOLIDAY EVER"</h5>
+                    <P>Nullam eu convallis tortor. Suspendisse potenti. 
+                      In faucibus messa arcu, vitae cursus mi hendrerit nec.</P>
+                  </div>
+                </div>
+            </div>
+            <div class="item itc">
+                <div class="c3">
+                  <div class="clogo">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp" alt="">
+                  </div>
+                  <div class="test_content">
+                    <div class="in-mid">
+                      <a>CARLA SMITH</a>
+                      <a class="in-mid-p">May 24, 2017</a>
+                    </div>
+                    <h5>"BEST HOLIDAY EVER"</h5>
+                    <P>Nullam eu convallis tortor. Suspendisse potenti. 
+                      In faucibus messa arcu, vitae cursus mi hendrerit nec.</P>
+                  </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="line"> 
+
+    </div>
+
+    <div class="title5">
+        <h2>TRENDING NOW</h2>
+    </div>
+
+    <div class="for-hotels">
+      <div class="hotels">
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_1.png.pagespeed.ic.T7lv0FH9k0.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>GRAND HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_2.png.pagespeed.ic.RVoMK96K_o.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>MARS HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_3.png.pagespeed.ic.r-Q1a1RUR6.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>QUEEN HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_4.png.pagespeed.ic.IIP5He-Ysz.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>MARS HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_5.png.pagespeed.ic.7EI7n6G_29.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>GRAND HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_6.png.pagespeed.ic.VzjfNeZa0P.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>MARS HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_7.png.pagespeed.ic.zHzApqDPn0.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>QUEEN HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+        <div class="hotel-offer">
+          <div class="hotelimg">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_8.png.pagespeed.ic.PnOWJ1cx4g.webp" alt="">
+          </div>
+          <div class="hotel-description">
+            <h6>MARS HOTEL</h6>
+            <a href="#">From $182</a>
+            <p>MADRID, SPAIN</p>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+      
+    <div class="boy">
+      <div class="message">
+        
+        <div class="mes-title">
+          <h3>GET IN TOUCH</h3>
+        </div>
+        <div class="your-info">
+          <input type="text" placeholder="Name" class="name">
+          <input type="email" class="email" placeholder="E-mail">
+        </div>
+        <input type="text" placeholder="Subject" class="subject">
+        <input type="text" placeholder="Message" class="message1">
+        <button class="sendmessage">SEND MESSAGE</button>
+      </div>
+    </div>
+
+    <footer class="f">
+      <div class="footer-element">
+        <div class="f-logo">
+          <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt="">
+          <h3>TRAVELIX</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. 
+          Integer eleme ntum orci eu vehicula pretium.</p>
+          <div class="f-fonts">
+            <a href="#" class="ia"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" class="ia"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="ia"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="ia"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#" class="ia"><i class="fa-brands fa-behance"></i></a>
+          </div>
+      </div>
+      <div class="footer-element">
+        <h6>BLOG POSTS</h6>
+        <div class="f-pic">
+          <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_1.jpg.pagespeed.ic.n5JT1wzbm-.webp" alt="">
+          <div class="in-f-pic">
+            <p>Travel with us this year</p>
+            <a href="#">Nov 29, 2017</a>
+          </div>
+        </div>
+        <div class="f-pic">
+          <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_2.jpg.pagespeed.ic.u_Bp7zMu38.webp" alt="">
+          <div class="in-f-pic">
+            <p>New destinations for you</p>
+            <a href="#">Nov 29, 2017</a>
+          </div>
+        </div>
+        <div class="f-pic">
+          <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_3.jpg.pagespeed.ic.XDkX_CloU3.webp" alt="">
+          <div class="in-f-pic">
+            <p>Travel with us this year</p>
+            <a href="#">Nov 29, 2017</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-element ext">
+        <h6>TAGS</h6>
+        <div class="tags">
+          <div class="tag">design</div>
+          <div class="tag">fashion</div>
+          <div class="tag">music</div>
+          <div class="tag">video</div>
+          <div class="tag">party</div>
+          <div class="tag">pohtography</div>
+          <div class="tag">adventure</div>
+          <div class="tag">travel</div>
+        </div>
+      </div>
+      <div class="footer-element ext2">
+        <h6>CONTENT INFO</h6>
+        <div class="info">
+          <img src="https://preview.colorlib.com/theme/travelix/images/placeholder.svg" alt="" class="limg">
+          <a href="#">
+            4127 Raoul Wallenber 45b-c Gibraltar</a>
+        </div>
+        <div class="info">
+          <img src="https://preview.colorlib.com/theme/travelix/images/phone-call.svg" alt="" class="limg">
+          <a href="#">
+            2556-808-8613</a>
+        </div>
+        <div class="info">
+          <img src="https://preview.colorlib.com/theme/travelix/images/message.svg" alt="" class="limg">
+          <a href="#">
+            contactme@gmail.com</a>
+        </div>
+        <div class="info">
+          <img src="https://preview.colorlib.com/theme/travelix/images/planet-earth.svg" alt="" class="limg">
+          <a href="#">
+            www.colorlib.com</a>
+        </div>
+      </div>
+
+
+    </footer>
+    <div class="last">
+      <div class="left-last">
+        <div class="copyright">
+          <p>Copyright ©2022 All rights reserved | This template is made with  by Colorlib</p>
+        </div>
+      </div>
+      <div class="right-last">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">OFFERS</a>
+        <a href="#">NEWS</a>
+        <a href="#">CONTACT</a>
+      </div>
+
+    </div>
+      
+      
+
+
+         
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:false,
+          dots:false,
+          responsive:{
+            0:{
+              items: 1
+            },
+            760:{
+              items: 2
+            },
+            1020:{
+              items: 3
+            }
+          }
+        })
+      </script>
+  
+
+
+
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
